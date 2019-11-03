@@ -11,7 +11,39 @@ Inside the `data` folder we provide samples of digital ink encoded in our digita
 ### Requirements
 The example code was tested on Windows 10 (x64) with Python 3.7.
 
-### Features
+### Python
+Quick example taken from `python/main.py`:
+```
+... 
+
+import digital_ink_features
+
+feature_selection = [
+    "weber_feature_05_compactness",
+    "willems_feature_24_duration"
+]
+
+sample_file = '../data/sample.json'
+file_result = digital_ink_features.calculate_features_file(sample_file, feature_selection, {})
+print(file_result)
+```
+
+### Rust
+Quick example taken from `rust/src/main.rs`:
+```
+...
+
+let feature_selection = vec!(
+    String::from("weber_feature_05_compactness"),
+    String::from("willems_feature_24_duration")
+);
+
+let file_result = features_file(String::from("../data/sample.json"), feature_selection.clone(), HashMap::new());
+println!("{:?}", file_result);
+
+```
+
+## Features
 A full list of features including their mathematical definition can be found in the Appendix section of our technical report (https://arxiv.org/abs/1810.03970). We provide reference implementations for the following feature sets:
 * `rubine`
 * `weber`
@@ -33,10 +65,10 @@ willems_feature_24_duration
 ```
 As per their definition some of these features might require additional arguments which can be provided individually per feature if necessary, otherwise default values will be used. Examples of how to configure these arguments can be found in the example code.
 
-### JSON digital ink format
+## JSON digital ink format
 We provide 2 types of containers for digital ink data: `stroke` and `sketch`. Objects of type `stroke` contain 4 arrays of data that have to be of same length: `x` coordinates as `float`, `y` coordinates as `float`, `timestamp` for timestamps as `long` and `pressure` values as `float`. The `type` field let's us distinguish between `stroke` and `sketch` as JSON itself is untyped. The `meta` field can be used for additional information, such as labels. Be aware that it has to be present event if empty, otherwise parsing errors will occur.
 
-#### Stroke
+### Stroke
 In general a `stroke` is represented as follows:
 ```
 {
@@ -86,7 +118,7 @@ Here is an example with actual values:
 }
 ```
 
-#### Sketch
+### Sketch
 A `sketch` is a ordered collection of multiple `stroke` objects:
 ```
 {
