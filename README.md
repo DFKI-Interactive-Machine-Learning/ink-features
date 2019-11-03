@@ -13,9 +13,7 @@ The example code was tested on Windows 10 (x64) with Python 3.7.
 
 ### Python
 Quick example taken from `python/main.py`:
-```
-... 
-
+```python
 import digital_ink_features
 
 feature_selection = [
@@ -30,9 +28,7 @@ print(file_result)
 
 ### Rust
 Quick example taken from `rust/src/main.rs`:
-```
-...
-
+```rust
 let feature_selection = vec!(
     String::from("weber_feature_05_compactness"),
     String::from("willems_feature_24_duration")
@@ -70,7 +66,7 @@ We provide 2 types of containers for digital ink data: `stroke` and `sketch`. Ob
 
 ### Stroke
 In general a `stroke` is represented as follows:
-```
+```json
 {
     "type": "stroke",
     "meta": {
@@ -107,7 +103,7 @@ In general a `stroke` is represented as follows:
 Note that fields `x` and `y` are required, while `timestamp` and `pressure` are optional. Be aware that these still need to be present if you want to calculate respective features that require these values. `timestamp` values can be either relative offset values, e.g., starting at `0` or alternatively absolute values such as unix timestamps.
 
 Here is an example with actual values:
-```
+```json
 {
     "type": "stroke",
     "meta": {},
@@ -120,7 +116,7 @@ Here is an example with actual values:
 
 ### Sketch
 A `sketch` is a ordered collection of multiple `stroke` objects:
-```
+```json
 {
     "type": "sketch",
     "meta": {
@@ -137,7 +133,7 @@ A `sketch` is a ordered collection of multiple `stroke` objects:
 }
 ```
 Here is an example of a `sketch` with sample value:
-```
+```json
 {
     "type": "sketch",
     "meta": {},
