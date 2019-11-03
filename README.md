@@ -66,7 +66,7 @@ We provide 2 types of containers for digital ink data: `stroke` and `sketch`. Ob
 
 ### Stroke
 In general a `stroke` is represented as follows:
-```json
+```
 {
     "type": "stroke",
     "meta": {
@@ -116,7 +116,7 @@ Here is an example with actual values:
 
 ### Sketch
 A `sketch` is a ordered collection of multiple `stroke` objects:
-```json
+```
 {
     "type": "sketch",
     "meta": {
@@ -160,7 +160,7 @@ Here is an example of a `sketch` with sample value:
 
 ## Citation
 If you use our work in your research please cite the following technical report:
-```
+```bibtex
 @misc{alex2018categorisation,
     title={A categorisation and implementation of digital pen features for behaviour characterisation},
     author={Alexander Prange and Michael Barz and Daniel Sonntag},
