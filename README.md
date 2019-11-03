@@ -12,7 +12,7 @@ Inside the `data` folder we provide samples of digital ink encoded in our digita
 The example code was tested on Windows 10 (x64) with Python 3.7.
 
 ### Python
-Quick example taken from `python/main.py`:
+Quick example taken from `python/main.py`, it loads a file and calculates the 2 specified features:
 ```python
 import digital_ink_features
 
@@ -27,7 +27,7 @@ print(file_result)
 ```
 
 ### Rust
-Quick example taken from `rust/src/main.rs`:
+Quick example taken from `rust/src/main.rs`, it loads a file and calculates the 2 specified features:
 ```rust
 let feature_selection = vec!(
     String::from("weber_feature_05_compactness"),
