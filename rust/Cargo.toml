@@ -1,0 +1,8 @@
+[package]
+name = "ink-features"
+version = "1.0.0"
+authors = ["Alexander Prange <alexander.prange@dfki.de>"]
+edition = "2018"
+
+[dependencies]
+libloading = "0.5"
