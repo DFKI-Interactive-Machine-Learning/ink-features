@@ -18,7 +18,7 @@ A full list of features including their mathematical definition can be found in 
 * `hbf49`
 * `willems`
 
-As you can see in the example code, you can select which features to compute by supplying a list of `keys` to the binary. The structure of each key is as follows:
+As you can see in the example code, you can select which features to compute by supplying a list of `keys` to the binary. A full list of feature keys is provided in the `feature_keys.txt` file. The structure of each key is as follows:
 ```
 {feature set}_feature_{index}_{acronym}
 ```
