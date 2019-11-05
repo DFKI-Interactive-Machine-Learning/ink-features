@@ -172,4 +172,4 @@ If you use our work in your research please cite the following technical report:
 ```
 
 ## License
-This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. You are free to use it in your research, but commercial use is prohibited. If in doubt please contact us about how you want to use our work.
+This work is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). You are free to use it in your research, but commercial use is prohibited. If in doubt please contact us about how you want to use our work.
