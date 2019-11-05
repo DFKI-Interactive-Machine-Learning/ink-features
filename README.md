@@ -170,3 +170,6 @@ If you use our work in your research please cite the following technical report:
     primaryClass={cs.CV}
 }
 ```
+
+## License
+This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. You are free to use it in your research, but commercial use is prohibited. If in doubt please contact us about how you want to use our work.
